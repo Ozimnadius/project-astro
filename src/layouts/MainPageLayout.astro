@@ -1,0 +1,49 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {pageTitle} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="generator" content={Astro.generator}>
+    <title>{pageTitle}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div class="wrapper">
+    <!--HEADER-->
+    <div class="wrapper__header">
+        <Header/>
+    </div>
+    <!--HEADER END-->
+
+    <!--CONTENT-->
+    <div class="wrapper__content">
+        <hr>
+        <div class="page">
+            <slot/>
+        </div>
+        <hr>
+    </div>
+    <!--CONTENT END-->
+
+    <!--FOOTER-->
+    <div class="wrapper__footer">
+        <Footer/>
+    </div>
+    <!--FOOTER END-->
+
+</div>
+</body>
+</html>
+

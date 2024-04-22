@@ -36,7 +36,9 @@ const {pageTitle} = Astro.props;
                 <Breadcrumbs/>
             </div>
             <h1 class="page__title">{pageTitle}</h1>
-            <slot/>
+            <div class="page__content">
+                <slot/>
+            </div>
         </div>
         <hr>
     </div>

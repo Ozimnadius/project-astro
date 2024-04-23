@@ -1,5 +1,7 @@
 ---
 import MainPageLayout from "../layouts/MainPageLayout.astro";
+import AstroHeart from "../components/AstroHeart.astro";
+import AstroGreet from "../components/AstroGreet.astro";
 ---
 <MainPageLayout pageTitle="Главная">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet asperiores aut commodi cum delectus dolorum
@@ -75,4 +77,9 @@ import MainPageLayout from "../layouts/MainPageLayout.astro";
     data-event="click.sendForm">
         Отправить форму
     </button>
+
+    <AstroHeart></AstroHeart>
+    <AstroGreet></AstroGreet>
+    <AstroGreet message="Lovely day to build components!" />
+    <AstroGreet message="Glad you made it! 👋" />
 </MainPageLayout>

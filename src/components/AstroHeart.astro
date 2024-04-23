@@ -1,0 +1,29 @@
+---
+
+---
+<!-- Оборачиваем компонент в наш пользовательский элемент "astro-heart". -->
+<astro-heart>
+    <button aria-label="Heart">💜</button> × <span>0</span>
+</astro-heart>
+
+<script>
+    // Определяем поведение для нашего нового типа HTML-элемента.
+    class AstroHeart extends HTMLElement {
+        constructor() {
+            super();
+            let count = 0;
+
+            const heartButton = this.querySelector('button');
+            const countSpan = this.querySelector('span');
+
+            // При каждом нажатии на кнопку обновляем счетчик.
+            heartButton.addEventListener('click', () => {
+                count++;
+                countSpan.textContent = count.toString();
+            });
+        }
+    }
+
+    // Сообщаем браузеру, чтобы он использовал наш класс AstroHeart для элементов <astro-heart>.
+    customElements.define('astro-heart', AstroHeart);
+</script>

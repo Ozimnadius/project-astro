@@ -1,5 +1,4 @@
 ---
-import '../styles/styles.scss';
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -19,7 +18,7 @@ const {pageTitle} = Astro.props;
     <link rel="manifest" href="/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
+    <script src="../scripts/script.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -46,9 +45,6 @@ const {pageTitle} = Astro.props;
     <!--FOOTER END-->
 
 </div>
-<script>
-    import '../scripts/script'
-</script>
 </body>
 </html>
 
